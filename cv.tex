@@ -6,6 +6,9 @@
 \usepackage{xcolor}
 \usepackage[none]{hyphenat}
 \usepackage{setspace}
+\usepackage{hyperref}
+
+\pagenumbering{gobble}
 
 \definecolor{headingblue}{HTML}{81ABD2}
 \setlength{\parindent}{0em}
@@ -24,93 +27,97 @@
 \begin{center} % just for vertical spacing and killing indent
     \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
         \textbf{Etienne LE LOUËT}  & 17/11/1996, Paris (nationalité française)\\
-        Titulaire d'un master en informatique  &  26 rue de la Providence, 75013, Paris\\
+        Doctorant en informatique  &  26 rue de la Providence, 75013, Paris\\
         & etiennelelouet@outlook.com\\
-        & github.com/etienne-lelouet
+        & \href{https://github.com/etienne-lelouet}{github.com/etienne-lelouet}
     \end{tabular*}
 \end{center}
-\setlength{\parskip}{0.1em}
 
-\textit{Diplomé d’un de master d'informatique de Sorbonne Université, je souhaite poursuivre mon cursus par une thèse dans les domaines touchants aux systèmes d’exploitation et aux réseaux. J’ai de l’expérience dans la programmation système ou noveau, l’algorithmique distribuée, et l’architecture des systèmes multi processeurs.}
+\textit{Actuellement doctorant en informatique, ma thèse porte sur l'optimisation des performances des protocoles de transport sécurisés utilisés par les différents acteurs du DNS.}
+
+\vspace{1em}
 
 \resumesectiontitle{Cursus}
 
-\textbf{\underline{2019 - 2021}, Sorbonne Université :} Master d’informatique - Systèmes et Applications Réparties - Mention Bien
-\setlength{\parskip}{0.75em}
+\textbf{\underline{2019 - 2021}, Sorbonne Université :} Master d'informatique - Systèmes et Applications Réparties - Mention Bien
 
-\textbf{\underline{2018 - 2019}, Sorbonne Université :} Licence d’informatique en apprentissage DANT - Mention Bien
+\vspace{1em}
 
-\textbf{\underline{2016 - 2018}, CFA Insta :} BTS en informatique spécialisée dans le développement d’applications
+\textbf{\underline{2018 - 2019}, Sorbonne Université :} Licence d'informatique en apprentissage DANT - Mention Bien
+
+\vspace{1em}
+
+\textbf{\underline{2016 - 2018}, CFA Insta :} BTS en informatique spécialisée dans le développement d'applications
+
+\vspace{1em}
 
 \resumesectiontitle{Expériences professionnelles}
-\setlength{\parskip}{0.1em}
 
-\textbf{\underline{Mars 2021 - Courant} - Travail en recherche et développement chez Gandi dans le cadre de ma thèse} :
+\textbf{\underline{Mars 2021 - Aujourd'hui} - Thèse CIFRE - GANDI, Sorbonne Université (LIP6) } :
 \begin{itemize}
-\item Etat de l’art sur les protocoles de transports utilisés pour DNS (HTTPS, QUIC, TLS, TCP)
-\item Réalisation d'une plateforme de mesure des performance des resolveurs DNS, sur la plateforme Grid5000 (Bash, Lua, docker).
-  \item Rédaction d'un article présentant les resultats de ces mesures.
+\item Redaction d'un article portant sur les performances des différents transports sécurisés pour DNS
+\item Rédaction d'une revue sur l'état de l'art des technologies de sécurisation de DNS
 \end{itemize}
 
-
-\setlength{\parskip}{0.75em}
+\vspace{1em}
 
 \textbf{\underline{Septembre 2018 - Septembre 2019} - Développeur Full Stack en apprentissage - startup KMB Labs} :
 \begin{itemize}
     \item Réalisation d'une application micro-services (Amazon Web Services  NodeJS, React et MongoDB).
 \end{itemize}
 
+\vspace{1em}
+
 \textbf{\underline{Septembre 2016 - Septembre 2018} - Développeur Full Stack en apprentissage - startup SPOTLOOK} :
 \begin{itemize}
-    \item Développement web Fullstack (PHP/MySQL, HTML/CSS, Javascript, VB.net)
+    \item Développement web Fullstack (PHP/MySQL, HTML/CSS, JavaScript, VB.net)
 \end{itemize}
 
+\vspace{1em}
 
-\resumesectiontitle{Projets académiques}
-\setlength{\parskip}{0.1em}
+\resumesectiontitle{Enseignement}
 
-\textbf{\underline{Septembre 2021 - Mars 2021} - Projets de M2} :
+\textbf{Chargé de TD :}
 \begin{itemize}
-    \item Modélisation et vérification des propriétés du cache d'un d’un processeur avec le vérificateur formel NuSMV
-    \item Implémentation et mesure des performances de l'algorithme de Paxos avec le simulateur PeerSim
+\item \textbf{\underline{Premier Semestre 2022/2023 et 2023/2024} - Programmation Java avancée}
+\item \textbf{\underline{Deuxième semestre 2021/2022} - Programmation Noyau}
+\item \textbf{\underline{Premier semestre 2021/2022} - Programmation Système Concurrente et Répartie}
 \end{itemize}
-\setlength{\parskip}{0.75em}
 
-\textbf{\underline{Septembre 2020 - Septembre 2021} - Projets de M1} :
+\vspace{1em}
+
+\resumesectiontitle{Publications scientifiques}
+
 \begin{itemize}
-    \item Implémentation de la table de hachage distribuée CHORD en C avec la librairie OpenMPI.
-    \item Réalisation d’un système de fichier dans le noyau Linux.
-    \item Création de scripts de débogage pour le noyau Linux en utilisant l’API Python de GNU Debugger.
+\item E. L. Louet, A. Blin, J. Sopena, A. Amamou and K. Haddadou, "Effects of secured DNS transport on resolver performance" 2023 IEEE Symposium on Computers and Communications (ISCC), Gammarth, Tunisia, doi: 10.1109/ISCC58397.2023.10217887.
+\item E. L. Louet, A. Blin, J. Sopena, A. Amamou and K. Haddadou, "Effets de l'utilisation de transports sécurisés sur les performances d'un resolveur DNS" Conférence francophone d'informatique en Parallélisme, Architecture et Système (COMPAS), Annecy, France, 2023
 \end{itemize}
 
+\vspace{1em}
 
-\resumesectiontitle{Projets personnels}
-\setlength{\parskip}{0.1em}
+\resumesectiontitle{Projets informatiques personnels}
+
 \begin{itemize}
-    \item Auto-hébergement : homeserver Matrix, seedbox, serveur DNS (autoritaire et resolver), streaming de musique.
-    \item Développement d’outils pour environnement de bureau Linux, (Xorg, PulseAudio), C et Bash.
+    \item Auto-hébergement : hébergement de sites web, seedbox, serveur DNS (autoritaire et resolveur)
+    \item Développement d’outils pour environnement de bureau Linux
 \end{itemize}
 
+\vspace{1em}
 
 \resumesectiontitle{Compétences}
-\setlength{\parskip}{0.1em}
+
 \begin{itemize}
-\item \textbf{Programmation :} C / C++ (APIs POSIX, parallèle, asynchrone), CUDA, SIMD, Python (numpy, matplotlib / seaborn, pandas), Java, Bash
-    \item \textbf{Architecture des OS :} Unix V6, Noyau Linux, virtualisation
-    \item \textbf{Architecture des ordinateurs :} Processeurs RISC, systèmes multi / many cores, modélisation SystemC
-    \item \textbf{Architecture des réseaux :} Pile TCP/IP, DNS, SMTP, HTTP, SSH, TLS
-    \item \textbf{Algorithmique répartie :} Temps partagé, consensus, diffusion, tolérance aux fautes, graphes dynamiques, auto-stabilisation, checkpointing, OpenMPI, Peersim.
-    \item \textbf{Développement Web Fullstack :} Conception de bases de données SQL, PHP / NodeJS / React / Svelte / MongoDB
-    \item \textbf{Outils :} Git, GDB, Emacs, Docker, LaTeX, plateformes cloud Amazon Web Services, Google Cloud Platform et Grid5000
+\item Programmation système : APIs POSIX, Noyau Linux (pile TCP/IP, drivers), eBPF, OpenSSL, GNUTLS, LibUV
+\item Autres langages : Python (pandas, matplotlib), PHP, NodeJS, Bash, design patterns objet (Java)
+\item Outils: Git, linux-perf, docker, latex,bases de données relationnelles
+\item Architecture des réseaux: pile TCP/IP, DNS, TLS, HTTP
+\item Langues étrangères - anglais courant, espagnol intermédiaire
 \end{itemize}
 
-
-\resumesectiontitle{Langues}
-\setlength{\parskip}{0.1em}
-Niveau C1 en anglais, A2 en espagnol
+\vspace{1em}
 
 \resumesectiontitle{Loisirs}
-\setlength{\parskip}{0.1em}
-Cyclisme, escalade, philosophie, musique expérimentale.
+
+Cuisine, escalade, philosophie, musique expérimentale.
 
 \end{document}

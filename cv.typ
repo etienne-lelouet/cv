@@ -1,19 +1,19 @@
 // Page setup
 #set document(title: "CV - Etienne Le Louët", author: "Etienne Le Louët")
-#set page(paper: "a4", margin: (x: 1.8cm, y: 1.0cm))
-#set text(font: "Libertinus Serif", size: 10pt, lang: "fr")
-#set par(justify: true, leading: 0.5em, spacing: 0.5em)
+#set page(paper: "a4", margin: (x: 2cm, y: 1.8cm))
+#set text(font: "Libertinus Serif", size: 10.5pt, lang: "fr")
+#set par(justify: true, leading: 0.6em, spacing: 0.6em)
 #set block(spacing: 0.5em)
 #show link: it => text(fill: black, it)
 
 // Section: small caps heading with thin rule below; never split across pages
-#let section(title, body) = block(above: 1.1em, breakable: false)[
+#let section(title, body) = block(above: 2.6em, breakable: false)[
   #block(
-    below: 0.6em,
+    below: 0.9em,
     stroke: (bottom: 0.5pt + black),
     inset: (bottom: 0.25em),
     width: 100%,
-    text(size: 11pt, weight: "bold", smallcaps(title)),
+    text(size: 12pt, weight: "bold", smallcaps(title)),
   )
   #body
 ]
@@ -21,12 +21,12 @@
 // Entry: date in left column, content in right column
 #let entry(date, body) = {
   grid(
-    columns: (3.9cm, 1fr),
+    columns: (4.3cm, 1fr),
     column-gutter: 0.6em,
     par(justify: false, date),
     body,
   )
-  v(0.35em)
+  v(1em)
 }
 
 // --- En-tête ---
@@ -36,29 +36,11 @@
   Ingénieur Recherche et Développement chez Gandi · Doctorant en informatique à Sorbonne Université (LIP6)
   #v(0.4em)
   #text(size: 9.5pt)[
-    26 rue de la Providence, 75013 Paris \
     #link("mailto:etiennelelouet@outlook.com")[etiennelelouet\@outlook.com]
     #h(0.6em) · #h(0.6em)
     #link("https://linkedin.com/in/eajlelouet")[linkedin.com/in/eajlelouet]
     #h(0.6em) · #h(0.6em)
     #link("https://github.com/etienne-lelouet")[github.com/etienne-lelouet]
-  ]
-]
-
-#section[Formation][
-  #entry[2022 à aujourd'hui][
-    *Doctorat : DNS haute performance, sécurisé et fiable* \
-    Sorbonne Université, LIP6 (équipe DELYS), CIFRE avec Gandi
-  ]
-
-  #entry[2019 à 2021][
-    *Master d'informatique SAR (Systèmes et Applications Réparties)* \
-    Sorbonne Université, mention bien
-  ]
-
-  #entry[2016 à 2019][
-    *Licence d'informatique en apprentissage (DANT)* \
-    Sorbonne Université, mention bien
   ]
 ]
 
@@ -82,6 +64,58 @@
     Développement web fullstack et systèmes embarqués : PHP, MySQL, JavaScript, VB.net
   ]
 ]
+
+#section[Enseignement et encadrement][
+  #entry[4 × 40h][
+    *Programmation Objet Avancée (POBJ)*, chargé de TD en L3 informatique \
+    Java, patrons de conception classiques
+  ]
+
+  #entry[1 × 40h][
+    *Programmation Système Concurrente et Répartie (PSCR)*, chargé de TD en M1 informatique \
+    Programmation système POSIX en C++
+  ]
+
+  #entry[1 × 40h][
+    *Programmation Noyau Linux (PNL)*, chargé de TD en M1 informatique \
+    Programmation noyau Linux
+  ]
+
+  #entry[Mars – Sept. 2026][
+    *Encadrement de stage de M2* \
+    Implémentation d'un outil de mesure de chemin sur Internet
+  ]
+
+  #entry[Mars – Sept. 2025][
+    *Encadrement de stage de M2* \
+    Implémentation d'un outil de mesure de chemin sur Internet
+  ]
+
+  #entry[Juin – Août 2024][
+    *Encadrement de stage de M1* \
+    Implémentation et mesure d'une solution de mitigation DDoS intégrée au serveur DNS
+  ]
+]
+
+#section[Formation][
+  #entry[2022 à aujourd'hui][
+    *Doctorat : DNS haute performance, sécurisé et fiable* \
+    Sorbonne Université, LIP6 (équipe DELYS), CIFRE avec Gandi \
+    Direction : Julien Sopena
+  ]
+
+  #entry[2019 à 2021][
+    *Master d'informatique SAR (Systèmes et Applications Réparties)* \
+    Sorbonne Université, mention bien
+  ]
+
+  #entry[2016 à 2019][
+    *Licence d'informatique en apprentissage (DANT)* \
+    Sorbonne Université, mention bien
+  ]
+]
+
+#pagebreak(weak: true)
 
 #section[Publications][
   #entry[\[1\]][
@@ -115,22 +149,10 @@
     *ComPAS 2024*, conférence francophone en parallélisme, architecture et système \
     Présentation de mes travaux de thèse
   ]
-]
 
-#section[Enseignement][
-  #entry[4 × 40h][
-    *Programmation Objet Avancée (POBJ)*, chargé de TD en L3 informatique \
-    Java, patrons de conception classiques
-  ]
-
-  #entry[1 × 40h][
-    *Programmation Système Concurrente et Répartie (PSCR)*, chargé de TD en M1 informatique \
-    Programmation système POSIX en C++
-  ]
-
-  #entry[1 × 40h][
-    *Programmation Noyau Linux (PNL)*, chargé de TD en M1 informatique \
-    Programmation noyau Linux
+  #entry[Juin 2023][
+    *Séminaire au laboratoire de physique APC* \
+    _An overview of the domain name system, or how and why we name things on the internet_
   ]
 ]
 
@@ -145,4 +167,6 @@
 #section[Langues][
   #entry[*Français*][Langue maternelle]
   #entry[*Anglais*][Courant]
+  #entry[*Espagnol*][Conversation]
+  #entry[*Alphabet cyrillique*][Translittération]
 ]

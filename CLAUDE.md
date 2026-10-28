@@ -20,6 +20,6 @@ Sections: Formation, Expériences professionnelles, Publications, Communications
 ### Design principles
 
 - Keep the template minimal — no external Typst packages.
-- Serif font (Libertinus Serif). Two pages are acceptable, but a section must never be split across pages (`section` wraps its content in a non-breakable block).
+- Serif font (Libertinus Serif). Two pages, both filled: a manual `#pagebreak(weak: true)` before Publications balances them, and spacing is generous. A section must never be split across pages (`section` wraps its content in a non-breakable block).
 - No em dashes (they take too much space): use commas, colons or parentheses.
 - The CV owner is a PhD student transitioning to private R&D.

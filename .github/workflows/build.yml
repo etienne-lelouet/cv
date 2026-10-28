@@ -1,0 +1,36 @@
+name: Build CV
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: typst-community/setup-typst@v4
+        with:
+          typst-version: 0.15.0
+
+      - run: make
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cv
+          path: cv.pdf
+
+      # Rolling "latest" release: stable download link to the current cv.pdf
+      - name: Publish latest release
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete latest --yes --cleanup-tag || true
+          gh release create latest cv.pdf --title "CV" --notes "Compiled from ${GITHUB_SHA}" --target "${GITHUB_SHA}"

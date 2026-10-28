@@ -1,0 +1,2 @@
+# Build output (compiled by CI, see .github/workflows/build.yml)
+*.pdf
